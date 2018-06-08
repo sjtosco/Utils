@@ -1,5 +1,7 @@
 # (My) Recommended GNS3 simulator on Debian 9
 
+## Dependencies
+sudo apt install qemu-kvm dynamips
 
 ## Creating a python3 virtualenv
 
