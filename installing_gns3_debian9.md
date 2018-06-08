@@ -17,13 +17,13 @@ Create a bash file and give execution permission:
   *sudo vi /usr/local/bin/gns3 && sudo chmod +x /usr/local/bin/gns3*
 
 ```
-#! /bin/bash
+#!/usr/bin/env bash
 cd <venv directory>
 source bin/activate
 # virtualenv is now active.
-#
-bin/gns3 &
+sleep 1
 
+bin/gns3 &
 ```
 
 ## And...
