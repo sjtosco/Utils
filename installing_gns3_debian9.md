@@ -7,7 +7,7 @@ sudo apt install qemu-kvm dynamips
 
 ```bash
 virtualenv venvGNS3 -p python3
-source venvGN3/bin/activate
+source venvGNS3/bin/activate
 pip install gns3-server gns3-gui pyqt5
 ```
 
