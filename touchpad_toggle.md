@@ -1,4 +1,4 @@
-Create an script in /usr/local/share called toggle_touchpad.sh
+Create an script in /usr/local/share called toggle_touchpad.sh and give it execution permission
 
 #!/bin/bash
 
