@@ -1,6 +1,6 @@
 Create an script in /usr/local/share called toggle_touchpad.sh and give it execution permission
 
-
+```bash
 #!/bin/bash
 
 device=11
@@ -13,6 +13,6 @@ else
   xinput --enable $device
   notify-send -i input-touchpad "Touchpad" "Enabled"
 fi
-
+```
 
 After configure shortcut in xfce4.
