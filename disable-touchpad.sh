@@ -2,17 +2,20 @@
 #
 # Purpose: Toggle synaptic touchpad on/off
 # Author: Fazle Arefin
-# Reference: http://ubuntuforums.org/showthread.php?t=1536305
+# References: http://ubuntuforums.org/showthread.php?t=1536305
+#            https://askubuntu.com/questions/438179/how-can-i-toggle-the-touchpad-depending-on-whether-a-mouse-is-connected
 #
 
-TOUCHPADID=11    # change this id
 
-SYNSTATE=$(xinput list-props "$TOUCHPADID" | grep "Device Enabled" | grep -Eo '.$')
-if [ $SYNSTATE = 0 ]; then 
-    xinput set-prop "$TOUCHPADID" "Device Enabled" 1
-    notify-send -i  "/home/tosco/.local/share/icons/misc/touchpad.png" "Touchpad ON"
-else 
-    xinput set-prop "$TOUCHPADID" "Device Enabled" 0
-    notify-send -i  "/home/tosco/.local/share/icons/misc/touchpad.png" "Touchpad OFF"
+#!/bin/bash
+
+device=$(xinput list | grep -iPo 'touchpad.*id=\K\d+')
+state=`xinput list-props "$device" | grep "Device Enabled" | grep -o "[01]$"`
+
+if [ $state == '1' ];then
+  xinput --disable $device
+  notify-send -i emblem-nowrite "Touchpad" "Disabled"
+else
+  xinput --enable $device
+  notify-send -i input-touchpad "Touchpad" "Enabled"
 fi
-
