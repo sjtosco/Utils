@@ -1,13 +1,14 @@
 # (My) Recommended GNS3 simulator on Debian 9
 
 ## Dependencies
+```
 sudo apt install qemu-kvm dynamips bridge-utils libvirt-dev
 cd Descargas
 git clone git://github.com/GNS3/ubridge.git
 cd ubridge
 make 
 sudo make install
-
+```
 ## Installing using pip3
 
 ```bash
