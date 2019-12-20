@@ -39,3 +39,24 @@ pip install tensorflow-gpu==1.15 keras
 ```
 
 > based on: [https://elec-otago.blogspot.com/2019/05/installing-tensorflow-and-cuda-10-on.html](https://elec-otago.blogspot.com/2019/05/installing-tensorflow-and-cuda-10-on.html)
+
+
+# Important notes
+
+On GTX2070 and similars, there is some error about *cudnn7*. This error are about tf session configuration.
+If use KERAS, this code is a workaround:
+```python
+import tensorflow as tf
+import keras.backend.tensorflow_backend as ktf
+
+
+def get_session(gpu_fraction=0.333):
+    gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction,
+                                allow_growth=True)
+    return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
+
+ktf.set_session(get_session())
+
+```
+> Based on [https://stackoverflow.com/questions/41762272/use-tensorflow-gpuoptions-within-keras-when-using-tensorflow-backend](https://stackoverflow.com/questions/41762272/use-tensorflow-gpuoptions-within-keras-when-using-tensorflow-backend)
