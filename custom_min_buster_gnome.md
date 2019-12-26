@@ -1,6 +1,6 @@
 # This is an custom "seudo minimal" Debian 10 (Buster) Gnome install
 
-1) Install debian 10 Gnome from [](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.2.0+nonfree/)
+1) Install debian 10 Gnome from [https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.2.0+nonfree/](https://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/10.2.0+nonfree/)
 2) Enable *sudo* (#/sbin/visudo), enable *contrib* and *non-free* repos and update system  (sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y)
 3) Remove some packsges:
     1) sudo apt remove --purge evolution gnome-games gnome-todo
@@ -30,3 +30,8 @@
         
     6) Customize keyboard shortcuts; themes; others
     7) Enjoy!
+
+
+> Based on:
+* [https://linuxhint.com/installing_wine_debian_10/](https://linuxhint.com/installing_wine_debian_10/)
+* [https://www.diversidadyunpocodetodo.com/debian-buster-10-guia-configuracion-instalacion-software/#7_Repositorio_multimedia_y_codecs_multimedia](https://www.diversidadyunpocodetodo.com/debian-buster-10-guia-configuracion-instalacion-software/#7_Repositorio_multimedia_y_codecs_multimedia)
