@@ -35,3 +35,4 @@
 > Based on:
 * [https://linuxhint.com/installing_wine_debian_10/](https://linuxhint.com/installing_wine_debian_10/)
 * [https://www.diversidadyunpocodetodo.com/debian-buster-10-guia-configuracion-instalacion-software/#7_Repositorio_multimedia_y_codecs_multimedia](https://www.diversidadyunpocodetodo.com/debian-buster-10-guia-configuracion-instalacion-software/#7_Repositorio_multimedia_y_codecs_multimedia)
+* [https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/](https://www.pyimagesearch.com/2018/05/28/ubuntu-18-04-how-to-install-opencv/)
