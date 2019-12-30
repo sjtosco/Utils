@@ -8,7 +8,7 @@
     3) sudo apt autoremove
     4) sudo reboot (To reboot system)
 4) Install some libraries and usefull utilities:
-    1) sudo apt install aria2 gufw linux-headers-$(uname -r) build-essential make automake cmake autoconf git wget gdebi firmware-linux lm-sensors hddtemp xsensors bleachbit hardinfo displaycal sudo apt install bzip2 zip unzip unace rar unace p7zip p7zip-full p7zip-rar unrar lzip lhasa arj sharutils mpack lzma lzop cabextract python3-pip vim htop ifstat speedtest-cli
+    1) sudo apt install aria2 gufw linux-headers-$(uname -r) build-essential make automake cmake autoconf git wget gdebi firmware-linux lm-sensors hddtemp xsensors bleachbit hardinfo displaycal && sudo apt install bzip2 zip unzip unace rar unace p7zip p7zip-full p7zip-rar unrar lzip lhasa arj sharutils mpack lzma lzop cabextract python3-pip vim htop ifstat speedtest-cli
     2) sudo apt install ffmpeg libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-pulseaudio vorbis-tools vlc libdvd-pkg fonts-freefont-ttf fonts-freefont-otf ttf-bitstream-vera fonts-roboto ttf-mscorefonts-installer openjdk-11-jre icedtea-netx openclipart mplayer mencoder winff obs-studio guvcview&& sudo fc-cache -f -v
     3) sudo dpkg --add-architecture i386 && sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt install wine wine64 wine32 winbind winetricks
     4) sudo apt install gimp gimp-data-extras gimp-dds gimp-gap gimp-gluas gimp-help-es gimp-lensfun gimp-plugin-registry gimp-python gimp-texturize gimp-dcraw inkscape sozi scribus scribus-template glabels fbreader thunderbird thunderbird-l10n-es-ar kolourpaint dia dia-shapes dia-rib-network
