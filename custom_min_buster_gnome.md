@@ -31,6 +31,20 @@
         
     6) Customize keyboard shortcuts; themes; others
     7) Enjoy!
+6) Add support for root GUI.
+Create file *wsudo*: `sudo vi /usr/local/bin/wsudo`. Put this content:
+```bash
+#!/bin/bash 
+# -*- ENCODING: UTF-8 -*-
+# small script to enable root access to x-windows system
+xhost +SI:localuser:root
+sudo $1
+# disable root acess after application terminates
+xhost -SI:localuser:root
+# print access status to allow verification that root access was removed
+xhost
+```
+Give file execution permissions: `sudo chmod +x /usr/local/bin/wsudo`
 
 
 > Based on:
