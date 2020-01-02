@@ -46,6 +46,10 @@ xhost
 ```
 Give file execution permissions: `sudo chmod +x /usr/local/bin/wsudo`
 
+## Minimize RAM
+
+* sudo chmod -x /usr/lib/evolution/evolution-*
+* sudo systemctl --now mask packagekit.service packagekit-offline-update.service
 
 > Based on:
 * [https://linuxhint.com/installing_wine_debian_10/](https://linuxhint.com/installing_wine_debian_10/)
