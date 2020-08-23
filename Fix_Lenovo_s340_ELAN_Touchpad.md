@@ -20,3 +20,18 @@ The next steps will be to patch the kernel
     Finally, run reboot
 
 Now, once you reboot, the touch pad should be working...
+
+For install new kernel (5+ from backports) that enable Debian 10 support for new S340 Lenovo Laptop:
+> WEB: https://unix.stackexchange.com/questions/545601/how-to-upgrade-the-debian-10-kernel-from-backports-without-recompiling-it-from-s
+
+```
+echo deb http://deb.debian.org/debian buster-backports main contrib non-free | sudo tee /etc/apt/sources.list.d/buster-backports.list
+sudo apt update
+sudo apt install -t buster-backports linux-image-amd64
+sudo apt install -t buster-backports firmware-linux firmware-linux-nonfree firmware-realtek 
+sudo reboot
+```
+After boot in new kernel...
+```
+sudo apt install linux-headers-$(uname -r)
+```
