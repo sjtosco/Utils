@@ -35,3 +35,8 @@ After boot in new kernel...
 ```
 sudo apt install linux-headers-$(uname -r)
 ```
+
+
+Easy fix (kernel 5.4):
+Add to grub
+GRUB_CMDLINE_LINUX_DEFAULT="quiet pci=nocrs" 
