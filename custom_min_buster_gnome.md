@@ -46,6 +46,10 @@ xhost
 ```
 Give file execution permissions: `sudo chmod +x /usr/local/bin/wsudo`
 
+7) sudo apt install texlive-xetex lyx tex4ht ispell ispanish texlive-latex-base texlive-latex-recommended texlive-fonts-extra texlive-lang-spanish texlive-bibtex-extra texlive-pictures preview-latex-style texlive-publishers texlive-fonts-recommended textlive-latex-extra texlive-xetex pandoc lmodern && lyx -x reconfigure
+
+8) 
+
 ## Minimize RAM
 
 * sudo chmod -x /usr/lib/evolution/evolution-*
