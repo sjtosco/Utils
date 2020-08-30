@@ -1,8 +1,8 @@
+## Touchpad ELAN 
+
 With this steps the problems if fixed (For now)
 
 > WEB: https://askubuntu.com/questions/1220264/lenovo-ideapad-s145-touchpad-not-working/1266740#1266740
-
-
 
 I had this same issue. The problem is with the kernel. The kernel hasn't detected the touch pad. Firstly edit the kernel boot parameters. This is what i did to solve it - EDIT: It is recommended to take a backup using cp /etc/default/grub /etc/default/grub.bak
 
@@ -43,3 +43,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pci=nocrs"
 
 Bios in Only UEFI and Secure Bott Disabled
 
+## snd_hda_intel no response from codec
+
+> Web: https://forums.linuxmint.com/viewtopic.php?t=306711&start=20
+
+add to file */etc/modprobe.d/alsa-base.conf* this line: **options snd-hda-intel model=dual-codecs**
