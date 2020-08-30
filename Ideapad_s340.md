@@ -48,3 +48,22 @@ Bios in Only UEFI and Secure Bott Disabled
 > Web: https://forums.linuxmint.com/viewtopic.php?t=306711&start=20
 
 add to file */etc/modprobe.d/alsa-base.conf* this line: **options snd-hda-intel model=dual-codecs**
+
+
+## Airplane Mode
+
+Creates a file */usr/local/bin/airplanemode-toggle.sh* with this:
+```bash
+#/bin/bash
+
+wifi="$(nmcli r wifi | awk 'FNR = 2 {print $1}')"
+if [ "$wifi" == "enabled" ]; then
+	/usr/sbin/rfkill block bluetooth;
+	/usr/sbin/rfkill block wlan;
+	/usr/bin/notify-send -t 2000 "Airplane mode ON";
+else
+	/usr/sbin/rfkill unblock bluetooth;
+	/usr/sbin/rfkill unblock wlan;
+	/usr/bin/notify-send -t 2000 "Airplane mode OFF"
+fi
+```
