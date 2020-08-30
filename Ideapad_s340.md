@@ -60,10 +60,28 @@ wifi="$(nmcli r wifi | awk 'FNR = 2 {print $1}')"
 if [ "$wifi" == "enabled" ]; then
 	/usr/sbin/rfkill block bluetooth;
 	/usr/sbin/rfkill block wlan;
-	/usr/bin/notify-send -t 2000 "Airplane mode ON";
+	/usr/bin/notify-send -t 2000 -i network-wireless-offline "Airplane mode ON";
 else
 	/usr/sbin/rfkill unblock bluetooth;
 	/usr/sbin/rfkill unblock wlan;
-	/usr/bin/notify-send -t 2000 "Airplane mode OFF"
+	/usr/bin/notify-send -t 2000 -i network-wireless-offline "Airplane mode OFF"
 fi
 ```
+Adjust keyboard shortkey to ,CTRL.+F7
+
+## Camera ON/OFF
+
+Creates a file */usr/local/bin/camera-toggle.sh* with this:
+```bash
+#/bin/bash
+
+wifi="$(lsmod | grep uvcvideo)"
+if [ -z "$wifi" ]; then
+	pkexec /sbin/modprobe uvcvideo;
+	/usr/bin/notify-send -t 2000 -i camera "Camera ON";
+else
+	pkexec /sbin/rmmod uvcvideo;
+	/usr/bin/notify-send -t 2000 -i camera "Camera OFF"
+fi
+```
+Adjust keyboard shortkey to ,CTRL.+F8
