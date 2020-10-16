@@ -85,3 +85,10 @@ else
 fi
 ```
 Adjust keyboard shortkey to ,CTRL.+F8
+
+
+## SND_INTEL ERROR NO CODEC
+`sudo tee /etc/modprobe.d/snd-hda-intel-fix.conf <<<'options snd-hda-intel probe_mask=1'`
+and reboot
+
+> From: https://forums.linuxmint.com/viewtopic.php?t=327629
