@@ -60,3 +60,8 @@ ktf.set_session(get_session())
 
 ```
 > Based on [https://stackoverflow.com/questions/41762272/use-tensorflow-gpuoptions-within-keras-when-using-tensorflow-backend](https://stackoverflow.com/questions/41762272/use-tensorflow-gpuoptions-within-keras-when-using-tensorflow-backend)
+
+
+# CUDA 10.1 for Linux mint 20
+
+https://towardsdatascience.com/installing-tensorflow-gpu-in-ubuntu-20-04-4ee3ca4cb75d
