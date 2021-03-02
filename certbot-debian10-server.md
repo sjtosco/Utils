@@ -12,3 +12,7 @@ cat /etc/letsencrypt/live/$DOMAIN/fullchain.pem > /etc/cockpit/ws-certs.d/1-my-c
 cat /etc/letsencrypt/live/$DOMAIN/privkey.pem >> /etc/cockpit/ws-certs.d/1-my-cert.cert
 
 systemctl daemon-reload && systemctl restart cockpit.socket
+
+# RENEW CRON
+
+https://linuxconfig.org/generate-ssl-certificates-with-letsencrypt-debian-linux
