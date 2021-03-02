@@ -16,3 +16,9 @@ systemctl daemon-reload && systemctl restart cockpit.socket
 # RENEW CRON
 
 https://linuxconfig.org/generate-ssl-certificates-with-letsencrypt-debian-linux
+
+
+
+
+
+> Other? https://www.digitalocean.com/community/tutorials/how-to-install-cockpit-on-debian-10
