@@ -1,6 +1,8 @@
 # Install and create certs
+```bash
 sudo apt install certbot
 sudo certbot certonly --standalone --agree-tos --email EMAIL.COM -d DOMAIN.COM
+``` 
 
 # Certs location
 /etc/letsencrypt/live/$DOMAIN/
