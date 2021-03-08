@@ -10,3 +10,4 @@ create /etc/docker/daemon.json file with content as follows:
 }
 
 ```
+and reboot (or sudo service docker restart)
